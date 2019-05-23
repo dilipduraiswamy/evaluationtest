@@ -22,6 +22,9 @@ export class DemoComponent implements OnInit {
 
   userTextvalue = '';
 
+  startDateError:Boolean;
+  endDateErrorMsg:String;
+  startDateErrorMsg:String;
 
 
   startDate: Date;
@@ -77,22 +80,32 @@ export class DemoComponent implements OnInit {
 
   startDateChangeEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     this.startDate = event.value;
+    this.endDateErrorMsg="";
     if (this.startDate > this.endDate) {
-
-      this.openSnackBar("Start date should be lesser than end date", "OK");
-      this.startDate = null;
-      this.startInput.value = "";
+      this.startDateErrorMsg="Start date should be lesser than end date";
+      //this.openSnackBar("Start date should be lesser than end date", "OK");
+      //this.startDate = null;
+      //this.startInput.value = "";
+     
+    }else
+    {
+      this.startDateError=false;
+      this.startDateErrorMsg="";
     }
 
   }
 
   endDateChangeEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     this.endDate = event.value;
-    if (this.startDate > this.endDate) {
-
-      this.openSnackBar("End date should not be lesser than start date", "OK");
-      this.endDate = null;
-      this.endInput.value = "";
+    this.startDateErrorMsg="";
+    if (this.endDate < this.startDate) {
+      this.endDateErrorMsg="End date should not be lesser than start date";
+      //this.openSnackBar("End date should not be lesser than start date", "OK");
+     // this.endDate = null;
+     // this.endInput.value = "";
+    
+    }else{
+      this.endDateErrorMsg="";
     }
 
 
@@ -105,6 +118,9 @@ export class DemoComponent implements OnInit {
   }
 
   ngOnInit() {
+    
+    this.startDateErrorMsg="";
+    this.endDateErrorMsg="";
   }
 
 }
