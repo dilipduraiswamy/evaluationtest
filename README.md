@@ -1,36 +1,38 @@
 #Steps to Run the project
 
-Step-1)
-Download from github using below link 
+## Step-1)
+Download from github using below link (https://github.com/dilipduraiswamy/evaluationtest)
 
 OR 
 
-git clone url in your command prompt
+git clone https://github.com/dilipduraiswamy/evaluationtest 
 
-Step-2)
+in your command prompt
+
+## Step-2)
 Download Dependencies of project i.e angular material and angular cli using below command
 npm install
 
-Step-3)
+## Step-3)
 Start the project by using 
 ng serve
 
-Step-4)
-## Demo Testing
+## Step-4) Demo Testing
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/demo`. The app will automatically reload if you change any of the source files.
 
-Component Name : Demo Component
+# Component Name : Demo Component
 
-Form Elements Used with Name
-
+# Form Elements Used with Name
+ 
 Date Picker's 
-Start Date : startPicker
-End Date : endPicker
+# Start Date : startPicker
+# End Date : endPicker
 
-Start Date Text Box : startInput
-End Date Text Box :  endInput
+# Start Date Text Box : startInput
+# End Date Text Box :  endInput
 
-Users List : filteredUsers
+# Users List : filteredUsers
 
 
 # Evaluationtest
