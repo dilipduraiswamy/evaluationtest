@@ -37,8 +37,10 @@ Date Picker's
 
 # Steps to check the project without coding
 npm install http-server -g
+
 http-server dist/evaluationtest
-Navigate to `http://localhost:8080/
+
+Navigate to `http://localhost:8080/`
 
 # Evaluationtest
 
