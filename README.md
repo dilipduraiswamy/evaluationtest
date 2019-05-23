@@ -36,6 +36,16 @@ Date Picker's
 
 
 # Steps to check the project without coding
+
+Download from github using below link (https://github.com/dilipduraiswamy/evaluationtest)
+
+OR
+
+git clone https://github.com/dilipduraiswamy/evaluationtest
+
+in your command prompt
+cd evaluationtest
+
 npm install http-server -g
 
 http-server dist/evaluationtest
