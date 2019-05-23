@@ -3,6 +3,7 @@
     <!--First Grid For Start Date-->
     <mat-grid-tile> 
       <mat-form-field appearance="outline">
+          <mat-label>Start Date</mat-label>
         <input matInput #startInput [matDatepicker]="startPicker" placeholder="Start date"
                (dateInput)="startDateChangeEvent('input', $event)" (dateChange)="startDateChangeEvent('change', $event)">
                <mat-hint style="color:red">{{startDateErrorMsg}}</mat-hint>
@@ -20,6 +21,7 @@
     <!--Second Grid For End Date-->
     <mat-grid-tile>
         <mat-form-field appearance="outline">
+            <mat-label>End Date</mat-label>
             <input matInput #endInput [matDatepicker]="endPicker" placeholder="End date"
                    (dateInput)="endDateChangeEvent('input', $event)" (dateChange)="endDateChangeEvent('change', $event)">
             <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
@@ -32,6 +34,7 @@
     <!--Third Grid For Autocomplete-->
     <mat-grid-tile>    
       <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Users</mat-label>
         <input matInput placeholder="Users" aria-label="Users" [(ngModel)]="userTextvalue" [matAutocomplete]="auto" [formControl]="userCtrl">
   
             <mat-icon style="cursor: pointer;" *ngIf="userTextvalue" matSuffix mat-icon-button aria-label="Clear" (click)="userTextvalue=''">close</mat-icon>
