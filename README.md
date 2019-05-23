@@ -21,18 +21,18 @@ ng serve
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/demo`. The app will automatically reload if you change any of the source files.
 
-# Component Name : Demo Component
+### Component Name : Demo Component
 
-# Form Elements Used with Name
+###  Form Elements Used with Name
  
 Date Picker's 
-# Start Date : startPicker
-# End Date : endPicker
+###  Start Date : startPicker
+###  End Date : endPicker
 
-# Start Date Text Box : startInput
-# End Date Text Box :  endInput
+###  Start Date Text Box : startInput
+###  End Date Text Box :  endInput
 
-# Users List : filteredUsers
+###  Users List : filteredUsers
 
 
 # Evaluationtest
