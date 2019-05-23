@@ -35,6 +35,11 @@ Date Picker's
 ###  Users List : filteredUsers
 
 
+# Steps to check the project without coding
+npm install http-server -g
+http-server dist/evaluationtest
+Navigate to `http://localhost:8080/
+
 # Evaluationtest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
