@@ -1,0 +1,40 @@
+<mat-grid-list cols="4" rowHeight="100px" >
+
+    <!--First Grid For Start Date-->
+    <mat-grid-tile> 
+      <mat-form-field>
+        <input matInput #startInput [matDatepicker]="startPicker" placeholder="Start date"
+               (dateInput)="startDateChangeEvent('input', $event)" (dateChange)="startDateChangeEvent('change', $event)">
+        <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <!--Second Grid For End Date-->
+    <mat-grid-tile>
+        <mat-form-field>
+            <input matInput #endInput [matDatepicker]="endPicker" placeholder="End date"
+                   (dateInput)="endDateChangeEvent('input', $event)" (dateChange)="endDateChangeEvent('change', $event)">
+            <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+            <mat-datepicker #endPicker></mat-datepicker>
+          </mat-form-field>
+    </mat-grid-tile>
+
+    <!--Third Grid For Autocomplete-->
+    <mat-grid-tile>    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Users" aria-label="Users" [(ngModel)]="userTextvalue" [matAutocomplete]="auto" [formControl]="userCtrl">
+  
+            <mat-icon style="cursor: pointer;" *ngIf="userTextvalue" matSuffix mat-icon-button aria-label="Clear" (click)="userTextvalue=''">close</mat-icon>
+         
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let user of filteredUsers | async" [value]="user.name">
+           
+            <span>{{user.name}}</span><br>
+            <small>{{user.code}}</small>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </mat-grid-tile>
+    
+  </mat-grid-list>
